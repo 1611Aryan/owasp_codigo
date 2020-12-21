@@ -4,10 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codigo</title>
+    <title>Build It Better</title>
+    <link rel="icon" type="image/png" href="./IMG/favicon.png">
+    <link rel="stylesheet" href="./CSS/style.css" type="text/css">
 </head>
 
 <body>
+
+    <header>
+        <div class="overlay"></div>
+        <picture>
+            <source srcset="./IMG/LOGO/logo.webp" type="image/webp">
+            <source srcset="./IMG/LOGO/logo.png" type="image/png">
+            <img src="./IMG/LOGO/logo.png" alt="">
+        </picture>
+        <ul>
+            <a href="#aboutUs">
+                <li>About Us</li>
+            </a>
+            <a href="">
+                <li>Events</li>
+            </a>
+            <a href="">
+                <li>Team</li>
+            </a>
+            <a href="">
+                <li>Contact Us</li>
+            </a>
+        </ul>
+    </header>
+
+    <section class="home">
+        <picture>
+            <source srcset="./IMG/homeBg.webp" type="image/webp">
+            <source srcset="./IMG/homeBg.jpg" type="image/jpg">
+            <img class="colored" src="./IMG/homeBg.jpg" alt="">
+        </picture>
+        <div class="pictureOverlay"></div>
+        <picture>
+            <source srcset="./IMG/homeBg.webp" type="image/webp">
+            <source srcset="./IMG/homeBg.jpg" type="image/jpg">
+            <img class="black_white" src="./IMG/homeBg.jpg" alt="">
+        </picture>
+        <div id="broken">
+            OWASP
+            <br> STUDENT CHAPTER
+        </div>
+    </section>
+
+    <section class="aboutUs" id="aboutUs">
+        <div class="aboutUs__overlay"></div>
+        <div class="aboutUs__content">
+            <h2>About Us</h2>
+            <p><span>O</span>pen <span>W</span>eb <span>A</span>pplication <span>S</span>ecurity <span>P</span>roject
+            </p>
+            <p>Thapar Institute of Engineering and Technology (TIET) has been a steady source of highly skilled talent to the nation as well as overseas. A pioneer in engineering education, research and innovation. The team of OWASP Student Chapter, one
+                of the gilt-edged coding society, involves ingenious mind solvers who are eager to make the world a better place to live in with their innovative techniques and discoveries. By successfully organizing many hackathons, tech-talks, workshops
+                and coding nights, we have always strived hard to maintain the coding culture throughout the campus.</p>
+        </div>
+    </section>
+
+    <section class="event"></section>
+
+
+
+
+    <script src="./JS/app.js"></script>
+    <script>
+        const broken = document.getElementById('broken');
+        broken.addEventListener('mousemove', (e) => {
+            let x = (window.innerWidth / 2 - e.clientX) / 20;
+            let y = (window.innerHeight / 2 - e.clientY) / 20;
+            broken.style.backgroundPosition = `${x}px ${y}px`;
+        });
+    </script>
 
 </body>
 

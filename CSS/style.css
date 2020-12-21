@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  cursor: url("../IMG/bee.png"), auto;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 5px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9999;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  opacity: 1;
+  z-index: -1;
+}
+
+header picture {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header picture img {
+  height: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header ul {
+  width: 60%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header ul a {
+  text-decoration: none;
+}
+
+header ul a li {
+  font-size: clamp(0.7rem, 3vw, 1.5rem);
+  color: white;
+  -webkit-transition: color ease-out 0.5s;
+  transition: color ease-out 0.5s;
+  cursor: pointer;
+}
+
+header ul a li:hover {
+  color: #fdfd5d;
+}
+
+.navChange .overlay {
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+}
+
+.navChange img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.navChange ul li {
+  color: black;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.home picture {
+  width: 100%;
+  height: 100%;
+}
+
+.home .colored {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.home .black_white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+  -webkit-clip-path: circle(100px at center center);
+          clip-path: circle(100px at center center);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.home .pictureOverlay {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.home #broken {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  font-size: clamp(4rem, 9vw, 5rem);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 900;
+  padding: 3rem;
+  background-image: url("../IMG/textBg.jpg");
+  background-size: cover;
+  color: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: poppins;
+}
+
+.home #broken::first-line {
+  font-size: clamp(4rem, 9vw, 6rem);
+}
+
+.aboutUs {
+  width: 100vw;
+  height: 100vh;
+  background: #1E1E28;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  z-index: 2;
+  background: url(../IMG/2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.aboutUs .aboutUs__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.aboutUs .aboutUs__content {
+  width: 70%;
+  background: rgba(20, 20, 20, 0.6);
+  padding: 2.5% 5%;
+  border-radius: 25px;
+  -webkit-box-shadow: inset 10px 10px 10px rgba(71, 71, 71, 0.9), inset -10px -10px 10px rgba(71, 71, 71, 0.9);
+          box-shadow: inset 10px 10px 10px rgba(71, 71, 71, 0.9), inset -10px -10px 10px rgba(71, 71, 71, 0.9);
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+  -webkit-transition: -webkit-transform ease-in-out 0.7s;
+  transition: -webkit-transform ease-in-out 0.7s;
+  transition: transform ease-in-out 0.7s;
+  transition: transform ease-in-out 0.7s, -webkit-transform ease-in-out 0.7s;
+}
+
+.aboutUs .aboutUs__content h2 {
+  font-family: 'Andika New Basic', sans-serif;
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  z-index: 9;
+  margin-bottom: 1rem;
+}
+
+.aboutUs .aboutUs__content p {
+  font-size: clamp(1rem, 4vw, 1.75rem);
+  z-index: 9;
+  margin-bottom: 0.5rem;
+}
+
+.aboutUs .aboutUs__content p span {
+  color: #ffff2e;
+  font-size: clamp(1.4rem, 5vw, 2.5rem);
+  line-height: 2rem;
+  width: 1.25rem;
+  overflow: hidden;
+  -webkit-transition: width ease-out 0.5s;
+  transition: width ease-out 0.5s;
+  -webkit-animation: colorWheel linear 5s infinite;
+          animation: colorWheel linear 5s infinite;
+}
+
+.aboutUs .aboutUs__content p:nth-of-type(2) {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+.aboutUs .aboutUs__contentFinalPos {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+@-webkit-keyframes colorWheel {
+  to {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes colorWheel {
+  to {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+.event {
+  width: 100vw;
+  height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */
