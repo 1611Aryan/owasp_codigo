@@ -1,0 +1,135 @@
+@media only screen and (max-width: 1200px) {
+  header picture img {
+    height: 70%;
+  }
+  .home #broken {
+    width: 80%;
+  }
+  .aboutUs .aboutUs__content {
+    width: 80%;
+  }
+  .event .eventContainer {
+    width: 50%;
+    height: 75%;
+  }
+  .event .eventContainer .pageContainer .eventPage picture {
+    height: 40%;
+  }
+  .team .teamHeading {
+    width: 93%;
+  }
+  .team .team__content {
+    height: 80%;
+  }
+  .team .team__content .teamCardContainer {
+    width: 30%;
+    height: 65%;
+    border-radius: 20px;
+  }
+  .team .team__content .teamCardContainer .teamCard .teamCardFront picture {
+    width: 60%;
+  }
+  .team .team__content .teamCardContainer .teamCard .teamCardFront .teamCard__content {
+    width: 90%;
+  }
+  .team .team__content .teamCardContainer .teamCard .teamCardBack picture {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .aboutUs .aboutUs__content {
+    width: 90%;
+  }
+  .event .eventContainer {
+    width: 60%;
+    height: 75%;
+  }
+  .event .eventContainer .pageContainer .eventPage picture {
+    height: 40%;
+  }
+  .team .teamHeading {
+    width: 93%;
+  }
+  .team .team__content {
+    height: 80%;
+  }
+  .team .team__content .teamCardContainer {
+    width: 30%;
+    height: 60%;
+    border-radius: 20px;
+  }
+  .team .team__content .teamCardContainer .teamCard .teamCardFront picture {
+    width: 60%;
+  }
+  .team .team__content .teamCardContainer .teamCard .teamCardFront .teamCard__content {
+    width: 90%;
+  }
+  .team .team__content .teamCardContainer .teamCard .teamCardBack picture {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header picture img {
+    height: 45%;
+  }
+  .aboutUs .aboutUs__content {
+    width: 90%;
+  }
+  .event .eventContainer {
+    width: 85%;
+    height: 75%;
+  }
+  .event .eventContainer .pageContainer .eventPage picture {
+    height: 40%;
+  }
+  .team .teamHeading {
+    width: 93%;
+  }
+  .team .team__content {
+    height: 80%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .team .team__content .teamCardContainer {
+    width: 70%;
+    height: 30%;
+    border-radius: 20px;
+  }
+  .team .team__content .teamCardContainer .teamCard .teamCardFront {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .team .team__content .teamCardContainer .teamCard .teamCardFront picture {
+    width: 45%;
+  }
+  .team .team__content .teamCardContainer .teamCard .teamCardFront .teamCard__content {
+    width: 45%;
+    height: 90%;
+  }
+  .team .team__content .teamCardContainer .teamCard .teamCardBack picture {
+    width: 80%;
+  }
+  .contactUs {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .contactUs .footer .column {
+    width: 50%;
+    height: 100%;
+  }
+  .contactUs .footer .column .columnContent {
+    width: 80%;
+    height: 100%;
+  }
+  .contactUs .footer .column .socialHandles {
+    width: 60%;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

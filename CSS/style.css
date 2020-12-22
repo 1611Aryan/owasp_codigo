@@ -38,6 +38,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
+  overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -55,7 +56,7 @@ body {
 
 .loadingScreen {
   z-index: 999;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -63,7 +64,7 @@ body {
   background: black;
   opacity: 1;
   color: white;
-  font-size: 2rem;
+  font-size: clamp(1rem, 4vw, 2rem);
   -webkit-transition: opacity ease-out 0.5s;
   transition: opacity ease-out 0.5s;
 }
@@ -217,7 +218,7 @@ header ul a {
 }
 
 header ul a li {
-  font-size: clamp(0.7rem, 3vw, 1.5rem);
+  font-size: clamp(0.7rem, 3vw, 1.6rem);
   color: white;
   -webkit-transition: color ease-out 0.5s;
   transition: color ease-out 0.5s;
@@ -296,7 +297,7 @@ header ul a li:hover {
   top: 50%;
   left: 50%;
   width: 60%;
-  font-size: clamp(4rem, 9vw, 5rem);
+  font-size: clamp(3rem, 5vw, 5rem);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-weight: 900;
@@ -310,7 +311,7 @@ header ul a li:hover {
 }
 
 .home #broken::first-line {
-  font-size: clamp(4rem, 9vw, 6rem);
+  font-size: clamp(3.5rem, 6vw, 6rem);
 }
 
 .home .downArrow {
@@ -373,20 +374,20 @@ header ul a li:hover {
 
 .aboutUs .aboutUs__content h2 {
   font-family: 'Andika New Basic', sans-serif;
-  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 5vw, 3rem);
   z-index: 9;
   margin-bottom: 1rem;
 }
 
 .aboutUs .aboutUs__content p {
-  font-size: clamp(1rem, 4vw, 1.75rem);
+  font-size: clamp(0.6rem, 4vw, 1.75rem);
   z-index: 9;
   margin-bottom: 0.5rem;
 }
 
 .aboutUs .aboutUs__content p span {
   color: #ffff2e;
-  font-size: clamp(1.4rem, 5vw, 2.5rem);
+  font-size: clamp(1rem, 4vw, 2.5rem);
   line-height: 2rem;
   width: 1.25rem;
   overflow: hidden;
@@ -397,7 +398,7 @@ header ul a li:hover {
 }
 
 .aboutUs .aboutUs__content p:nth-of-type(2) {
-  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-size: clamp(0.7rem, 2vw, 1.5rem);
 }
 
 .aboutUs .aboutUs__contentFinalPos {
@@ -432,10 +433,6 @@ header ul a li:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #242424;
-}
-
-.event h2 {
-  z-index: 3;
 }
 
 .event .eventBg {
@@ -474,6 +471,7 @@ header ul a li:hover {
 
 .event h2 {
   font-size: clamp(2rem, 7vw, 3rem);
+  z-index: 3;
 }
 
 .event .eventContainer {
@@ -529,18 +527,18 @@ header ul a li:hover {
 }
 
 .event .eventContainer .pageContainer .eventPage .pageContent h3 {
-  font-size: 2rem;
+  font-size: clamp(1rem, 3vw, 2rem);
 }
 
 .event .eventContainer .pageContainer .eventPage .pageContent p {
-  font-size: 1rem;
+  font-size: clamp(0.7rem, 3vw, 1rem);
 }
 
 .event .eventContainer .leftArrow {
   position: absolute;
   top: 50%;
   left: 1rem;
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 3vw, 2rem);
   color: rgba(255, 255, 255, 0.7);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -552,7 +550,7 @@ header ul a li:hover {
   position: absolute;
   top: 50%;
   right: 1rem;
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 3vw, 2rem);
   color: rgba(255, 255, 255, 0.7);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -659,17 +657,17 @@ header ul a li:hover {
 }
 
 .team .team__content .teamCardContainer .teamCard .teamCardFront .teamCard__content h2 {
-  font-size: 1.25rem;
+  font-size: clamp(0.8rem, 3vw, 1.25rem);
 }
 
 .team .team__content .teamCardContainer .teamCard .teamCardFront .teamCard__content h3 {
-  font-size: 1rem;
+  font-size: clamp(0.6rem, 3vw, 1rem);
   width: 100%;
   border-bottom: 3px solid cyan;
 }
 
 .team .team__content .teamCardContainer .teamCard .teamCardFront .teamCard__content p {
-  font-size: 0.8rem;
+  font-size: clamp(0.5rem, 2vw, 0.8rem);
 }
 
 .team .team__content .teamCardContainer .teamCard .teamCardBack {
@@ -738,11 +736,11 @@ header ul a li:hover {
 }
 
 .contactUs .row1 h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .contactUs .row1 p {
-  font-size: 2rem;
+  font-size: clamp(1rem, 3vw, 2rem);
 }
 
 .contactUs .row2 {
@@ -761,11 +759,11 @@ header ul a li:hover {
 }
 
 .contactUs .row2 .phoneIcon i {
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
 }
 
 .contactUs .row2 .number {
-  font-size: 1.75rem;
+  font-size: clamp(1rem, 3vw, 1.75rem);
 }
 
 .contactUs .footer {
@@ -820,7 +818,7 @@ header ul a li:hover {
 }
 
 .contactUs .footer .column h3 {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 3vw, 1.25rem);
 }
 
 .contactUs .footer .column h3:hover {
@@ -828,7 +826,7 @@ header ul a li:hover {
 }
 
 .contactUs .footer .column p {
-  font-size: 1rem;
+  font-size: clamp(0.7rem, 3vw, 1rem);
 }
 
 .contactUs .footer .column p:hover {
@@ -848,7 +846,7 @@ header ul a li:hover {
 
 .contactUs .footer .column .socialHandles a i {
   color: black;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   cursor: pointer;
   -webkit-transition: all ease-out 0.5s;
   transition: all ease-out 0.5s;

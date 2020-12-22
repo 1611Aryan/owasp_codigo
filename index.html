@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Build It Better</title>
     <link rel="icon" type="image/png" href="./IMG/favicon.png">
-    <link rel="stylesheet" href="./CSS/style.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="./CSS/responsive.css" type="text/css">
 </head>
 
 <body>
@@ -59,10 +60,10 @@
             <source srcset="./IMG/homeBg.jpg" type="image/jpg">
             <img class="black_white" src="./IMG/homeBg.jpg" alt="">
         </picture>
-        <div id="broken">
+        <p id="broken">
             OWASP
             <br> STUDENT CHAPTER
-        </div>
+        </p>
 
 
     </section>
@@ -274,6 +275,7 @@
             if (pageYOffset < 0.1 * innerHeight) {
                 document.querySelector('.footer').classList.add('footerChange2');
             }
+            document.body.style.overflowY = 'visible';
         }
         const broken = document.getElementById('broken');
         broken.addEventListener('mousemove', (e) => {
