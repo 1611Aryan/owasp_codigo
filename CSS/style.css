@@ -4,7 +4,7 @@
   --noOfPages: 4;
 }
 
-header, header picture, header ul, .home .downArrow, .aboutUs, .event, .event .eventContainer .pageContainer, .event .eventContainer .pageContainer .eventPage, .event .eventContainer .pageContainer .eventPage .pageContent, .team, .team .team__content, .team .team__content .teamCardContainer .teamCard .teamCardFront, .team .team__content .teamCardContainer .teamCard .teamCardFront .teamCard__content, .team .team__content .teamCardContainer .teamCard .teamCardBack, .contactUs, .contactUs .row1, .contactUs .footer, .contactUs .footer .column, .contactUs .footer .column .columnContent, .contactUs .footer .column .socialHandles {
+.loadingScreen, header, header picture, header ul, .home .downArrow, .aboutUs, .event, .event .eventContainer .pageContainer, .event .eventContainer .pageContainer .eventPage, .event .eventContainer .pageContainer .eventPage .pageContent, .team, .team .team__content, .team .team__content .teamCardContainer .teamCard .teamCardFront, .team .team__content .teamCardContainer .teamCard .teamCardFront .teamCard__content, .team .team__content .teamCardContainer .teamCard .teamCardBack, .contactUs, .contactUs .row1, .contactUs .footer, .contactUs .footer .column, .contactUs .footer .column .columnContent, .contactUs .footer .column .socialHandles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,6 +53,124 @@ body {
   border-radius: 5px;
 }
 
+.loadingScreen {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: 1;
+  color: white;
+  font-size: 2rem;
+  -webkit-transition: opacity ease-out 0.5s;
+  transition: opacity ease-out 0.5s;
+}
+
+.loadingScreen span {
+  display: inline-block;
+}
+
+.loadingScreen span:nth-of-type(1) {
+  -webkit-animation: rotateY 0.7s linear alternate 0.7s;
+          animation: rotateY 0.7s linear alternate 0.7s;
+}
+
+.loadingScreen span:nth-of-type(2) {
+  -webkit-animation: rotateY 0.7s linear alternate 1.4s;
+          animation: rotateY 0.7s linear alternate 1.4s;
+}
+
+.loadingScreen span:nth-of-type(3) {
+  -webkit-animation: rotateY 0.7s linear alternate 2.1s;
+          animation: rotateY 0.7s linear alternate 2.1s;
+}
+
+.loadingScreen span:nth-of-type(4) {
+  -webkit-animation: rotateY 0.7s linear alternate 2.8s;
+          animation: rotateY 0.7s linear alternate 2.8s;
+}
+
+.loadingScreen span:nth-of-type(5) {
+  -webkit-animation: rotateY 0.7s linear alternate 3.5s;
+          animation: rotateY 0.7s linear alternate 3.5s;
+}
+
+.loadingScreen span:nth-of-type(6) {
+  -webkit-animation: rotateY 0.7s linear alternate 4.2s;
+          animation: rotateY 0.7s linear alternate 4.2s;
+}
+
+.loadingScreen span:nth-of-type(7) {
+  -webkit-animation: rotateY 0.7s linear alternate 4.9s;
+          animation: rotateY 0.7s linear alternate 4.9s;
+}
+
+.loadingScreen span:nth-of-type(8) {
+  -webkit-animation: rotateY 0.7s linear alternate 5.6s;
+          animation: rotateY 0.7s linear alternate 5.6s;
+}
+
+.loadingScreen span:nth-of-type(9) {
+  -webkit-animation: rotateY 0.7s linear alternate 6.3s;
+          animation: rotateY 0.7s linear alternate 6.3s;
+}
+
+.loadingScreen span:nth-of-type(10) {
+  -webkit-animation: rotateY 0.7s linear alternate 7s;
+          animation: rotateY 0.7s linear alternate 7s;
+}
+
+.loadingScreen span:nth-of-type(11) {
+  -webkit-animation: rotateY 0.7s linear alternate 7.7s;
+          animation: rotateY 0.7s linear alternate 7.7s;
+}
+
+.loadingScreen span:nth-of-type(12) {
+  -webkit-animation: rotateY 0.7s linear alternate 8.4s;
+          animation: rotateY 0.7s linear alternate 8.4s;
+}
+
+.loadingScreen span:nth-of-type(13) {
+  -webkit-animation: rotateY 0.7s linear alternate 9.1s;
+          animation: rotateY 0.7s linear alternate 9.1s;
+}
+
+.loadingScreen span:nth-of-type(14) {
+  -webkit-animation: rotateY 0.7s linear alternate 9.8s;
+          animation: rotateY 0.7s linear alternate 9.8s;
+}
+
+.loadingScreen span:nth-of-type(15) {
+  -webkit-animation: rotateY 0.7s linear alternate 10.5s;
+          animation: rotateY 0.7s linear alternate 10.5s;
+}
+
+.loadingScreen span:nth-of-type(16) {
+  -webkit-animation: rotateY 0.7s linear alternate 11.2s;
+          animation: rotateY 0.7s linear alternate 11.2s;
+}
+
+.loadingScreen span:nth-of-type(17) {
+  -webkit-animation: rotateY 0.7s linear alternate 11.9s;
+          animation: rotateY 0.7s linear alternate 11.9s;
+}
+
+@-webkit-keyframes rotateY {
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotateY {
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
 header {
   position: fixed;
   top: 0;
@@ -62,7 +180,7 @@ header {
   background: transparent;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  z-index: 9999;
+  z-index: 99;
 }
 
 header .overlay {
@@ -656,7 +774,7 @@ header ul a li:hover {
   left: 0;
   width: 100%;
   height: 10%;
-  z-index: 9999;
+  z-index: 99;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

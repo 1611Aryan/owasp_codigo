@@ -12,6 +12,15 @@
 
 <body>
 
+    <div class="loadingScreen">
+        <h1>
+            <span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span><span>
+                &nbsp;
+            </span><span>S</span><span>C</span><span>R</span><span>E</span><span>E</span><span>N</span><span>.</span><span>.</span><span>.</span>
+        </h1>
+
+    </div>
+
     <header>
         <div class="overlay"></div>
         <picture>
@@ -72,6 +81,7 @@
     <section class="event" id="event">
         <div class="eventBg">
             <picture>
+                <source srcset="./IMG/eventBg2.webp" type="image/webp">
                 <source srcset="./IMG/eventBg2.jpg" type="image/jpg">
                 <img src="./IMG/eventBg2.jpg" alt="">
             </picture>
@@ -81,6 +91,7 @@
             <div class="pageContainer">
                 <div class="eventPage">
                     <picture>
+                        <source srcset="./IMG/codigo.webp" type="image/webp">
                         <source srcset="./IMG/codigo.png" type="image/png">
                         <img src="./IMG/codigo.png" alt="">
                     </picture>
@@ -91,6 +102,7 @@
                 </div>
                 <div class="eventPage">
                     <picture>
+                        <source srcset="./IMG/cursed.webp" type="image/webp">
                         <source srcset="./IMG/cursed.png" type="image/png">
                         <img src="./IMG/cursed.png" alt="">
                     </picture>
@@ -101,6 +113,7 @@
                 </div>
                 <div class="eventPage">
                     <picture>
+                        <source srcset="./IMG/hackOwasp.webp" type="image/webp">
                         <source srcset="./IMG/hackOwasp.png" type="image/png">
                         <img src="./IMG/hackOwasp.png" alt="">
                     </picture>
@@ -111,6 +124,7 @@
                 </div>
                 <div class="eventPage">
                     <picture>
+                        <source srcset="./IMG/techniti.webp" type="image/webp">
                         <source srcset="./IMG/techniti.png" type="image/png">
                         <img src="./IMG/techniti.png" alt="">
                     </picture>
@@ -134,7 +148,8 @@
                 <div class="teamCard">
                     <div class="teamCardFront">
                         <picture>
-                            <source srcset="./IMG/potter.jpg">
+                            <source srcset="./IMG/potter.webp" type="image/webp">
+                            <source srcset="./IMG/potter.jpg" type="image/jpg">
                             <img src="./IMG/potter.jpg">
                         </picture>
                         <div class="teamCard__content">
@@ -156,7 +171,8 @@
                 <div class="teamCard">
                     <div class="teamCardFront">
                         <picture>
-                            <source srcset="./IMG/hermione.jpg">
+                            <source srcset="./IMG/hermione.webp" type="image/webp">
+                            <source srcset="./IMG/hermione.jpg" type="image/jpg">
                             <img src="./IMG/hermione.jpg">
                         </picture>
                         <div class="teamCard__content">
@@ -178,7 +194,8 @@
                 <div class="teamCard">
                     <div class="teamCardFront">
                         <picture>
-                            <source srcset="./IMG/weasley.jpg">
+                            <source srcset="./IMG/weasley.webp" type="image/webp">
+                            <source srcset="./IMG/weasley.jpg" type="image/jpg">
                             <img src="./IMG/weasley.jpg">
                         </picture>
                         <div class="teamCard__content">
@@ -249,6 +266,15 @@
 
     <script src="./JS/app.js "></script>
     <script>
+        window.onload = () => {
+            document.querySelector('.loadingScreen').style.opacity = '0';
+            document.querySelector('.loadingScreen').addEventListener('transitionend', () => {
+                document.querySelector('.loadingScreen').style.display = 'none';
+            })
+            if (pageYOffset < 0.1 * innerHeight) {
+                document.querySelector('.footer').classList.add('footerChange2');
+            }
+        }
         const broken = document.getElementById('broken');
         broken.addEventListener('mousemove', (e) => {
             let x = (window.innerWidth / 2 - e.clientX) / 20;
