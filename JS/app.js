@@ -39,7 +39,7 @@ window.addEventListener("scroll", () => {
             card.style.opacity = '0';
         });
     }
-    if (pageYOffset > 0.1 * innerHeight && pageYOffset < 3.7 * innerHeight) {
+    if (pageYOffset > 0.1 * innerHeight && pageYOffset < 3 * innerHeight) {
         $('.footer').classList.add('footerChange');
         $('.footer').classList.remove('footerChange2');
     }
