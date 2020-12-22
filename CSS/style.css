@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-header, header picture, header ul, .home .downArrow, .aboutUs, .event .eventContainer, .event .eventContainer .eventContent, .event .eventContainer .eventContent .cardContainer .eventCard .cardTop, .event .eventContainer .eventContent .cardContainer .eventCard .cardTop picture, .event .eventContainer .eventContent .cardContainer .eventCard .cardBottom, .team, .team .team__content, .team .team__content .teamCardContainer .teamCard .teamCardFront, .team .team__content .teamCardContainer .teamCard .teamCardFront .teamCard__content, .team .team__content .teamCardContainer .teamCard .teamCardBack, .contactUs, .contactUs .row1, .contactUs .footer, .contactUs .footer .column, .contactUs .footer .column .columnContent, .contactUs .footer .column .socialHandles {
+:root {
+  --noOfPages: 4;
+}
+
+header, header picture, header ul, .home .downArrow, .aboutUs, .event, .event .eventContainer .pageContainer, .event .eventContainer .pageContainer .eventPage, .event .eventContainer .pageContainer .eventPage .pageContent, .team, .team .team__content, .team .team__content .teamCardContainer .teamCard .teamCardFront, .team .team__content .teamCardContainer .teamCard .teamCardFront .teamCard__content, .team .team__content .teamCardContainer .teamCard .teamCardBack, .contactUs, .contactUs .row1, .contactUs .footer, .contactUs .footer .column, .contactUs .footer .column .columnContent, .contactUs .footer .column .socialHandles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,9 +111,9 @@ header ul a li:hover {
 }
 
 .navChange .overlay {
-  background: rgba(255, 255, 255, 0.4);
-  -webkit-backdrop-filter: blur(7px);
-          backdrop-filter: blur(7px);
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .navChange img {
@@ -202,9 +206,7 @@ header ul a li:hover {
 
 .home .downArrow i {
   font-size: 4rem;
-  color: rgba(255, 255, 255, 0.5);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
   -webkit-animation: wiggle 0.3s linear infinite alternate;
           animation: wiggle 0.3s linear infinite alternate;
@@ -301,179 +303,104 @@ header ul a li:hover {
 
 .event {
   width: 100vw;
-  height: 120vh;
+  height: 100vh;
   position: relative;
   color: white;
   z-index: 3;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #242424;
 }
 
-.event .eventOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  z-index: 0;
+.event h2 {
+  font-size: clamp(2rem, 7vw, 3rem);
 }
 
 .event .eventContainer {
-  width: 100%;
-  height: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  z-index: 2;
-}
-
-.event .eventContainer p {
-  text-align: center;
-  font-size: clamp(2rem, 4vw, 3rem);
-  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  z-index: 2;
-}
-
-.event .eventContainer .eventContent {
-  width: 100%;
-  height: 90%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  z-index: 2;
-}
-
-.event .eventContainer .eventContent .cardContainer {
-  width: 30%;
-  height: 45%;
+  width: 35%;
+  height: 85%;
   border-radius: 25px;
-}
-
-.event .eventContainer .eventContent .cardContainer .eventCard {
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
   position: relative;
-  border-radius: 25px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition: opacity ease-in-out 0.7s, -webkit-transform ease 0.7s;
-  transition: opacity ease-in-out 0.7s, -webkit-transform ease 0.7s;
-  transition: transform ease 0.7s, opacity ease-in-out 0.7s;
-  transition: transform ease 0.7s, opacity ease-in-out 0.7s, -webkit-transform ease 0.7s;
-  -webkit-transform: rotateX(0deg);
-          transform: rotateX(0deg);
-  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-  opacity: 0;
 }
 
-.event .eventContainer .eventContent .cardContainer .eventCard .cardTop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.event .eventContainer .pageContainer {
+  width: calc(100%*var(--noOfPages));
   height: 100%;
-  z-index: 2;
-  border-radius: 25px;
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  -webkit-transition: -webkit-transform ease-in-out 0.7s;
+  transition: -webkit-transform ease-in-out 0.7s;
+  transition: transform ease-in-out 0.7s;
+  transition: transform ease-in-out 0.7s, -webkit-transform ease-in-out 0.7s;
+}
+
+.event .eventContainer .pageContainer .eventPage {
+  width: calc(100%/var(--noOfPages));
+  height: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: rgba(0, 0, 0, 0.4);
 }
 
-.event .eventContainer .eventContent .cardContainer .eventCard .cardTop picture {
-  height: 60%;
+.event .eventContainer .pageContainer .eventPage picture {
+  height: 50%;
 }
 
-.event .eventContainer .eventContent .cardContainer .eventCard .cardTop picture img {
+.event .eventContainer .pageContainer .eventPage picture img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.event .eventContainer .eventContent .cardContainer .eventCard .cardTop h2 {
+.event .eventContainer .pageContainer .eventPage .pageContent {
   width: 80%;
-  text-align: center;
-  font-size: clamp(0.7rem, 3vw, 1.5rem);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.event .eventContainer .eventContent .cardContainer .eventCard .cardBottom {
+.event .eventContainer .pageContainer .eventPage .pageContent h3 {
+  font-size: 2rem;
+}
+
+.event .eventContainer .pageContainer .eventPage .pageContent p {
+  font-size: 1rem;
+}
+
+.event .eventContainer .leftArrow {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  z-index: 1;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  top: 50%;
+  left: 1rem;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 999;
+  cursor: pointer;
 }
 
-.event .eventContainer .eventContent .cardContainer .eventCard .cardBottom p {
-  width: 80%;
-  font-size: clamp(0.6rem, 3vw, 0.9rem);
-  color: white;
-}
-
-.event .eventContainer .eventContent .cardContainer:hover .eventCard {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.event .eventContainer .eventContent .cardContainer:nth-of-type(1) .cardTop {
-  background: -webkit-gradient(linear, right top, left top, from(#2C5364), color-stop(#203A43), to(#0F2027));
-  background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
-}
-
-.event .eventContainer .eventContent .cardContainer:nth-of-type(1) .cardBottom {
-  background: -webkit-gradient(linear, left top, right top, from(#2C5364), color-stop(#203A43), to(#0F2027));
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-}
-
-.event .eventContainer .eventContent .cardContainer:nth-of-type(2) .cardTop {
-  background: -webkit-gradient(linear, right top, left top, from(#1f1f1f), to(#3a3a3a));
-  background: linear-gradient(to left, #1f1f1f, #3a3a3a);
-}
-
-.event .eventContainer .eventContent .cardContainer:nth-of-type(2) .cardBottom {
-  background: -webkit-gradient(linear, left top, right top, from(#1f1f1f), to(#3a3a3a));
-  background: linear-gradient(to right, #1f1f1f, #3a3a3a);
-}
-
-.event .eventContainer .eventContent .cardContainer:nth-of-type(3) .cardTop {
-  background: -webkit-gradient(linear, right top, left top, from(#ff5349), to(#fa6f3d));
-  background: linear-gradient(to left, #ff5349, #fa6f3d);
-}
-
-.event .eventContainer .eventContent .cardContainer:nth-of-type(3) .cardBottom {
-  background: -webkit-gradient(linear, left top, right top, from(#ff5349), to(#fa6f3d));
-  background: linear-gradient(to right, #ff5349, #fa6f3d);
-}
-
-.event .eventContainer .eventContent .cardContainer:nth-of-type(4) .cardTop {
-  background: -webkit-gradient(linear, right top, left top, from(#f1ff27), to(#fff352));
-  background: linear-gradient(to left, #f1ff27, #fff352);
-}
-
-.event .eventContainer .eventContent .cardContainer:nth-of-type(4) .cardBottom {
-  background: -webkit-gradient(linear, left top, right top, from(#f1ff27), to(#fff352));
-  background: linear-gradient(to right, #f1ff27, #fff352);
+.event .eventContainer .rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 999;
+  cursor: pointer;
 }
 
 .team {
@@ -737,8 +664,16 @@ header ul a li:hover {
   font-size: 1.25rem;
 }
 
+.contactUs .footer .column h3:hover {
+  color: teal !important;
+}
+
 .contactUs .footer .column p {
   font-size: 1rem;
+}
+
+.contactUs .footer .column p:hover {
+  color: teal !important;
 }
 
 .contactUs .footer .column .socialHandles {
@@ -755,6 +690,15 @@ header ul a li:hover {
 .contactUs .footer .column .socialHandles a i {
   color: black;
   font-size: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+.contactUs .footer .column .socialHandles a i:hover {
+  color: teal !important;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .footerChange {

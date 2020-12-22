@@ -70,3 +70,18 @@ $('.goDown').addEventListener('click', () => {
 $('.logo').addEventListener('click', () => {
     $('.home').scrollIntoView();
 });
+let posCounter = 0;
+$('.rightArrow').addEventListener('click', () => {
+    posCounter++;
+    if (posCounter > 3) {
+        posCounter = 0;
+    }
+    $('.pageContainer').style.transform = `translateX(calc(-100%/4*${posCounter}))`;
+});
+$('.leftArrow').addEventListener('click', () => {
+    posCounter--;
+    if (posCounter < 0) {
+        posCounter = 3;
+    }
+    $('.pageContainer').style.transform = `translateX(calc(-100%/4*${posCounter}))`;
+});
