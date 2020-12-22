@@ -657,17 +657,17 @@ header ul a li:hover {
 }
 
 .team .team__content .teamCardContainer .teamCard .teamCardFront .teamCard__content h2 {
-  font-size: clamp(0.8rem, 3vw, 1.25rem);
+  font-size: clamp(0.75rem, 3vw, 1.25rem);
 }
 
 .team .team__content .teamCardContainer .teamCard .teamCardFront .teamCard__content h3 {
-  font-size: clamp(0.6rem, 3vw, 1rem);
+  font-size: clamp(0.55rem, 3vw, 1rem);
   width: 100%;
   border-bottom: 3px solid cyan;
 }
 
 .team .team__content .teamCardContainer .teamCard .teamCardFront .teamCard__content p {
-  font-size: clamp(0.5rem, 2vw, 0.8rem);
+  font-size: clamp(0.45rem, 2vw, 0.8rem);
 }
 
 .team .team__content .teamCardContainer .teamCard .teamCardBack {
