@@ -7,6 +7,7 @@
     <title>Build It Better</title>
     <link rel="icon" type="image/png" href="./IMG/favicon.png">
     <link rel="stylesheet" href="./CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 
 <body>
@@ -16,25 +17,28 @@
         <picture>
             <source srcset="./IMG/LOGO/logo.webp" type="image/webp">
             <source srcset="./IMG/LOGO/logo.png" type="image/png">
-            <img src="./IMG/LOGO/logo.png" alt="">
+            <img class="logo" src="./IMG/LOGO/logo.png" alt="">
         </picture>
         <ul>
             <a href="#aboutUs">
                 <li>About Us</li>
             </a>
-            <a href="">
+            <a href="#event">
                 <li>Events</li>
             </a>
-            <a href="">
+            <a href="#team">
                 <li>Team</li>
             </a>
-            <a href="">
+            <a href="#contactUs">
                 <li>Contact Us</li>
             </a>
         </ul>
     </header>
 
     <section class="home">
+        <div class="downArrow">
+            <i class="fas fa-chevron-down goDown"></i>
+        </div>
         <picture>
             <source srcset="./IMG/homeBg.webp" type="image/webp">
             <source srcset="./IMG/homeBg.jpg" type="image/jpg">
@@ -50,10 +54,11 @@
             OWASP
             <br> STUDENT CHAPTER
         </div>
+
+
     </section>
 
     <section class="aboutUs" id="aboutUs">
-        <div class="aboutUs__overlay"></div>
         <div class="aboutUs__content">
             <h2>About Us</h2>
             <p><span>O</span>pen <span>W</span>eb <span>A</span>pplication <span>S</span>ecurity <span>P</span>roject
@@ -64,12 +69,199 @@
         </div>
     </section>
 
-    <section class="event"></section>
+    <section class="event" id="event">
+        <div class="eventContainer">
+            <p>Our Events</p>
+            <div class="eventContent">
+                <div class="cardContainer">
+                    <div class="eventCard">
+                        <div class="cardTop">
+                            <picture>
+                                <source srcset="./IMG/codigo.png" type="image/png">
+                                <img src="./IMG/codigo.png" alt="">
+                            </picture>
+                            <h2>Codigo</h2>
+                        </div>
+                        <div class="cardBottom">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatibus possimus accusamus, quas dicta, veniam dolor sunt ipsa laborum distinctio molestiae officia sit exercitationem, corrupti odit excepturi cupiditate!
+                                Quae, consectetur?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatibus possimus accusamus, quas dicta, veniam dolor sunt ipsa laborum distinctio molestiae officia sit exercitationem, corrupti odit
+                                excepturi cupiditate! Quae, consectetur?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardContainer">
+                    <div class="eventCard">
+                        <div class="cardTop">
+                            <picture>
+                                <source srcset="./IMG/cursed.png" type="image/png">
+                                <img src="./IMG/cursed.png" alt="">
+                            </picture>
+                            <h2>The Cursed Week</h2>
+                        </div>
+                        <div class="cardBottom">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatibus possimus accusamus, quas dicta, veniam dolor sunt ipsa laborum distinctio molestiae officia sit exercitationem, corrupti odit excepturi cupiditate!
+                                Quae, consectetur?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatibus possimus accusamus, quas dicta, veniam dolor sunt ipsa laborum distinctio molestiae officia sit exercitationem, corrupti odit
+                                excepturi cupiditate! Quae, consectetur?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardContainer">
+                    <div class="eventCard">
+                        <div class="cardTop">
+                            <picture>
+                                <source srcset="./IMG/hackOwasp.png" type="image/png ">
+                                <img src="./IMG/hackOwasp.png " alt=" ">
+                            </picture>
+                            <h2>HACKOWASP</h2>
+                        </div>
+                        <div class="cardBottom ">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatibus possimus accusamus, quas dicta, veniam dolor sunt ipsa laborum distinctio molestiae officia sit exercitationem, corrupti odit excepturi cupiditate!
+                                Quae, consectetur?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatibus possimus accusamus, quas dicta, veniam dolor sunt ipsa laborum distinctio molestiae officia sit exercitationem, corrupti odit
+                                excepturi cupiditate! Quae, consectetur?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardContainer">
+                    <div class="eventCard ">
+                        <div class="cardTop ">
+                            <picture>
+                                <source srcset="./IMG/techniti.png " type="image/png ">
+                                <img src="./IMG/techniti.png " alt=" ">
+                            </picture>
+                            <h2>TECHNITI</h2>
+                        </div>
+                        <div class="cardBottom ">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatibus possimus accusamus, quas dicta, veniam dolor sunt ipsa laborum distinctio molestiae officia sit exercitationem, corrupti odit excepturi cupiditate!
+                                Quae, consectetur?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatibus possimus accusamus, quas dicta, veniam dolor sunt ipsa laborum distinctio molestiae officia sit exercitationem, corrupti odit
+                                excepturi cupiditate! Quae, consectetur?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="team" id="team">
+        <h2 class="teamHeading">Our Team</h2>
+        <div class="team__content">
+            <div class="teamCardContainer">
+                <div class="teamCard">
+                    <div class="teamCardFront">
+                        <picture>
+                            <source srcset="./IMG/potter.jpg">
+                            <img src="./IMG/potter.jpg">
+                        </picture>
+                        <div class="teamCard__content">
+                            <h2>Lorem Epsum</h2>
+                            <h3>General Secretary</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dolor quos animi corporis, maxime vero deleniti quisquam voluptatibus dolore, iste saepe, sequi unde magni officiis dolorem ratione tenetur illo minima</p>
+                        </div>
+                    </div>
+                    <div class="teamCardBack">
+                        <picture>
+                            <source srcset="./IMG/LOGO/logo.webp" type="image/webp">
+                            <source srcset="./IMG/LOGO/logo.png" type="image/png">
+                            <img src="./IMG/LOGO/logo.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="teamCardContainer">
+                <div class="teamCard">
+                    <div class="teamCardFront">
+                        <picture>
+                            <source srcset="./IMG/hermione.jpg">
+                            <img src="./IMG/hermione.jpg">
+                        </picture>
+                        <div class="teamCard__content">
+                            <h2>Lorem Epsum</h2>
+                            <h3>General Secretary</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dolor quos animi corporis, maxime vero deleniti quisquam voluptatibus dolore, iste saepe, sequi unde magni officiis dolorem ratione tenetur illo minima</p>
+                        </div>
+                    </div>
+                    <div class="teamCardBack">
+                        <picture>
+                            <source srcset="./IMG/LOGO/logo.webp" type="image/webp">
+                            <source srcset="./IMG/LOGO/logo.png" type="image/png">
+                            <img src="./IMG/LOGO/logo.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="teamCardContainer">
+                <div class="teamCard">
+                    <div class="teamCardFront">
+                        <picture>
+                            <source srcset="./IMG/weasley.jpg">
+                            <img src="./IMG/weasley.jpg">
+                        </picture>
+                        <div class="teamCard__content">
+                            <h2>Lorem Epsum</h2>
+                            <h3>Joint Secretary</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dolor quos animi corporis, maxime vero deleniti quisquam voluptatibus dolore, iste saepe, sequi unde magni officiis dolorem ratione tenetur illo minima</p>
+                        </div>
+                    </div>
+                    <div class="teamCardBack">
+                        <picture>
+                            <source srcset="./IMG/LOGO/logo.webp" type="image/webp">
+                            <source srcset="./IMG/LOGO/logo.png" type="image/png">
+                            <img src="./IMG/LOGO/logo.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="contactUs" id="contactUs">
+        <div class=" row1">
+            <h2>Contact Us</h2>
 
+            <p>Get In Touch and Let's Make Something Great Together</p>
+        </div>
+        <div class="row2">
+            <div class="phoneIcon">
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="number">
+                Gen Sec:+91 1234567890
+                <br>Gen Sec: +91 0987654321
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footerOverlay"></div>
+            <div class="column">
+                <div class="columnContent">
+                    <h3>Find Us At</h3>
 
-    <script src="./JS/app.js"></script>
+                    <p>Thapar Insititute, Patiala
+                    </p>
+                </div>
+
+            </div>
+            <div class="column">
+                <div class="columnContent">
+                    <h3>Follow Us</h3>
+                    <div class="socialHandles">
+                        <a href="
+                    https://instagram.com/owasp_tiet?igshid=16izs5zdfpdjs">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="
+                    https://www.facebook.com/owasptsc/">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <a href="https://twitter.com/Owasptiet1?s=09">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="./JS/app.js "></script>
     <script>
         const broken = document.getElementById('broken');
         broken.addEventListener('mousemove', (e) => {
